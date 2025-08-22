@@ -407,3 +407,22 @@ for (let i =0; i<= val; i++){
       console.log (`${i} is odd`);
    }
 }
+
+// 1 to 100 number print when you get divisible by 7 then stop
+
+for (let i = 1 ; i < 100 ; i++){
+   // console.log(i); or
+   console.log(`${i} Breaked`);
+   if(i % 4 === 0){
+      break;
+   }
+}
+
+// Skip the number of which is mult by 3 
+
+for (let i = 1; i < 8; i++){
+   if(i % 3 === 0){
+      continue;
+   }
+   console.log(i);
+}
