@@ -357,7 +357,7 @@ while(num>0){
 //Even number using for loop
 
 for(i = 1; i < 11; i++){
-   if(i%2 === 0) {
+   if(i % 2 === 0) {
       console.log("Even Number ",i);
    }
 }
@@ -374,13 +374,11 @@ for(i = 1; i < 6; i++){
 
 for (i =1 ; i<10; i++){
   
-      console.log(`5* ${i} = ${5*i}`); // to print full format we used dynamic pattern $ using 
+      console.log(`5* ${i} = ${5*i}`);     // to print full format we used dynamic pattern $ using 
    
 }
 
 // Sum of number 1 to 100
-
-
 
  let sum = 0; 
  for (i = 1; i < 101 ; i++){
@@ -396,9 +394,9 @@ for (let i=0; i<20; i++){
    }
 }
 
-/// Enter number and check odd or even
+// Enter number and check odd or even
 
-let val = prompt("Enetr a number"); // Prompt used like to input field
+let val = prompt("Enetr a number");      // Prompt used like to input field
 
 for (let i =0; i<= val; i++){
    if (i%2 === 0){
@@ -414,7 +412,7 @@ for (let i = 1 ; i < 100 ; i++){
    // console.log(i); or
    console.log(`${i} Breaked`);
    if(i % 4 === 0){
-      break;
+      break;                          // here we used to break for stop the which number we want
    }
 }
 
@@ -422,7 +420,46 @@ for (let i = 1 ; i < 100 ; i++){
 
 for (let i = 1; i < 8; i++){
    if(i % 3 === 0){
-      continue;
+      continue;                      // Here we used continue it will be skipped multi by 3 
    }
    console.log(i);
+}
+
+// First 5 odd number to print  1,3,5,7,9
+
+let odd = 0;                        // declare odd number is 0
+for(let i =1 ; i<101; i++){
+   if(i%2 === 1){
+      odd++                          // To count the number  odd 
+      console.log("5 odd number ; ",i);
+   }
+   if(odd === 5){                    // when you got odd number count will be 5 then break 
+      break;
+   }
+}
+
+// The sum of 10 
+
+let add = 0;
+
+for (let i =0; i<11; i++){
+   add = add + i;
+}
+   console.log("Sum of 10",add);
+
+// Factorial number to find 
+
+let fac = 1;
+
+for (let i = 1; i<6; i++){
+   fac = fac * i;
+}
+console.log("Factorial is :", fac);
+
+//To print array of fruits
+
+
+let fruits = ["apple", "banana", "mango"];
+for (let i =0; i<=fruits.length; i++){
+   console.log(fruits[i]);
 }
