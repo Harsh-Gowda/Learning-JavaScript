@@ -463,3 +463,35 @@ let fruits = ["apple", "banana", "mango"];
 for (let i =0; i<=fruits.length; i++){
    console.log(fruits[i]);
 }
+
+// Return answer from 10 to 1
+
+for (let i = 10; i>=0; i--){
+   console.log(i);
+}
+
+// Vowels find 
+
+let word = "India";
+let vowel = "aeiouAEIOU";
+
+for(let char of word){  
+
+   if(vowel.includes(char)){ // This is check wheteher the word which we want to check in this varible thats why we used includes.
+      console.log(char, "Vowel")
+   
+   }else{
+      console.log("Consonent", char);
+   }
+}
+
+// Reverse the string word
+
+let strng = "Hello";
+let reverse = "";
+
+for (let i = strng.length-1; i>=0; i--){
+   reverse = reverse + strng[i];
+}
+
+console.log("Reverse ", reverse);
