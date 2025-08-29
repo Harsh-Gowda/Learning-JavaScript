@@ -477,7 +477,7 @@ let vowel = "aeiouAEIOU";
 
 for(let char of word){  
 
-   if(vowel.includes(char)){ // This is check wheteher the word which we want to check in this varible thats why we used includes.
+   if(vowel.includes(char)){ // This is check whether the word which we want to check in this varible thats why we used includes.
       console.log(char, "Vowel")
    
    }else{
@@ -495,3 +495,301 @@ for (let i = strng.length-1; i>=0; i--){
 }
 
 console.log("Reverse ", reverse);
+
+
+// consonents find
+
+let  exmple = "harshgowda";
+let  vowe = "aeiouAEIOU";
+
+for (let conso of exmple){
+   if(vowe.includes(conso)){
+      console.log("This is vowels", conso);
+   }else{
+      console.log("This is consonents",conso);
+   }
+}
+
+// Large numebr in array
+
+let numbers = [12, 45, 7, 89, 23];
+
+let max = numbers[0];
+
+for (let i = 0; i<numbers.length; i++){
+   if(numbers[i] > max){
+      max = numbers[i];
+   }
+}
+   console.log("Large number", max);
+
+
+// Module -6 Functions
+// Functions Means we dont want immediately run output we want run when we click any button in that time only it will be run otherwise not run
+
+function car(){ // function statemnet 
+   console.log("This is first method to declarataion of function");
+}
+car(); 
+
+let func = function(){ // function expression
+   console.log("This is second function declartin method");
+}
+
+func();
+
+let funct = ()=>{  //  fat Arrow function
+   console.log("This is 3rd function declartion");
+}
+funct();
+
+// parameter and Arguments
+
+function bike(value){
+   console.log(`${value} Is riding`);
+}
+
+bike("Harsh");
+bike("Gnai");
+
+function value(v1,v2){
+   console.log(v1 + v2);
+}
+
+value(20, 30);
+
+// rest function  (...) -> This is used when parameter are written but same as argument wee not wrote in that time we used rest argument.
+
+function abcd(a,b,c,...value){
+console.log("This is value get abc then rest of the value :",a,b,c,value);
+}
+abcd(1,2,3,4,5,6,7);
+
+// Return question
+
+function abc(v1, v2){
+   return "harsh" + v1 + v2 ;
+}
+
+let abd = abc(" gowda ", "ujire ")
+   console.log("This is function ans", abd);
+
+// First class Function - > Functions can be traeted as a value in coding
+
+function animal(val){
+   val();
+}
+animal(function(){  // We created here function to print the output place of val to display
+   console.log("lion");
+});
+
+// Higher order function
+
+function pet(){
+   return function(){
+      console.log("Dog");
+   }
+}
+pet()();
+
+//pure and impure function
+
+let a =20;
+
+function hee(){
+   console.log("This is number"); // This is pure function because it is not change anymore  
+}
+function maths(){
+   a++; // Here the a value is changed and  output is showing 22 because increment we used in here
+}
+
+// closure 
+
+function closure(){
+   let a = 3;
+   return function(){
+      console.log("Closure value  ;", a);  // we return inside one more function this is called as cloasure
+   }
+}
+
+// Lexical scoping - > It means we create a function inside by inside 
+
+function ab(){
+   let a =10; // This is work entire function from 618 to 625 line 
+   function cd(){
+      let b =20; // This is work from 619 to 625
+      function ef(){
+         let c =30; // This will be work 621 to 625 line 
+      }
+   }
+}
+
+// Immediate invoke function (IIFE)
+
+(function mn(){
+   console.log("Immedidiate call heeeeee");  // 
+})(); // Immediate to call with last bracket "()" we used to run
+
+
+//Hoisting 
+
+jkl();   //We declare before write function this is called as hoisting
+
+function jkl(){ // !Not whether we declare varible (let abcd = function jkl(code){}) we cannote call before function write we get error 
+   console.log("Hoisting function declaratinon good");
+}
+
+// Create a function  inside one function
+
+
+function zy(val){ 
+   val();
+}
+zy(function(){
+   console.log("Heyyyyyy");
+   
+})
+
+// Write a BMI Calculator - > It means to find a person healthy or fat 
+
+function bmi(weight,height){
+ return weight / (height*height); //This is farmula to find 
+}
+console.log("This is value of bmi : ",bmi(70, 2.5).toFixed(3));  // here used toFixid because we want 3 digit only output so we used that 
+
+
+// Reusable discount calculator High order function
+
+function discountCalculator(discount){
+   return function(price){
+      return price - price * (discount/100); // this is for discount the actual price with using  10% discount
+   }
+}
+
+let ten = discountCalculator(10);
+let twenty = discountCalculator(20);
+// console.log("The discount value is =",discounter(200));
+
+console.log("The discount value is = ", ten(500));
+
+// To increase counter value  using closure method
+
+function counter(){
+   let count = 0;
+
+   return function(){
+      count++;
+      return count;
+   };
+}
+
+let g = counter();
+
+console.log("First number = ",g());
+console.log("First number = ",g());
+
+let l = counter();
+   console.log("first number in l = ", l());
+
+// pure function to transform value
+
+function pure(val){ // pure means we code with an inside of function we dont use any input from outside that called impure
+    return val  / 30;
+}
+
+console.log("The pure value is = ",pure(70));
+
+
+//iifi function 
+
+(function(){
+   const password = "secret password";
+   console.log(password);
+})();
+
+// console.log(password); // We cant use out side of function password in iifi function 
+
+
+// Module - 7 ->  Arrays and objects
+
+let arr = [1,2,"harsh"];
+arr[1] = 10;
+console.log(arr); 
+
+// Push method - > To push the value into array
+
+let valuePush = [1,2,3,4];
+
+valuePush.push(3000);
+
+console.log(valuePush);
+
+//Pop method - > TO remove values from array
+
+let valuePop = [1,2,3,4];
+
+valuePop.pop(); // To remove last value in array
+// valuePop[2] = 4
+console.log(valuePop);
+
+// Shift method  -> To  remove first of array
+
+let valueShift = [1,2,3,45];
+
+valueShift.shift(); // This is used for remove first value in arary
+
+console.log("Value shift =0", valueShift);
+
+//Unshift - > This is add value in front 
+
+let valueUnshift = [1,2,3,4];
+
+valueUnshift.unshift();
+
+console.log("Unshift value =", valueUnshift);
+
+// Splice - > This is used for remove middle of the array values 
+
+let valueSplice = [1,2,3,4,5,6];
+
+valueSplice.splice(1,3); // In here input is index number and how ,uch value to remove after what i selected index number
+
+console.log("Splice value",valueSplice);
+
+// Slice ->  It will give separate values from array 
+
+let slice = [1,2,3,4,5,6];
+
+let newSlice = slice.slice(1,4);
+
+console.log("Before Slice value =",slice);
+console.log("After Slice value =",newSlice);
+
+//Reverse - > TO reverse the array  values
+
+let valueReverse = [1,2,3,4,5,6];
+valueReverse.reverse();
+
+console.log("This si reverse value", valueReverse);
+
+//Sort -> it means sorted like assending or desending order
+
+let valueSort = [23,29,11,35,21,40];
+let sortValue = valueSort.sort(function(a,b){
+   return a-b;
+   
+  
+});
+
+console.log("Sorted value in assending order =", sortValue);
+
+// Foreach - > To check in array each value 
+
+let valueFor = [1,2,3];
+
+valueFor.forEach(function(val){
+   console.log("Foreach Value = ",val + 2);
+})
+
+// Map -> 
+
